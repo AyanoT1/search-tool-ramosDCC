@@ -1,0 +1,85 @@
+{
+    "CC3001": {
+        "name": "CC3301 - Algoritmos y Estructuras de Datos",
+        "desc": "aka Intro a la progra 2. Se ven algoritmos eficientes, análisis de algoritmos y estructuras de datos.",
+        "difficulty": 4,
+        "time": 4
+    },
+
+    "CC3002": {
+        "name": "CC3002 - Metodologías de Diseño y Programación",
+        "desc": "aka Memes, momazos toro, etc. Se ve la programación orientada a objetos usando Scala y al final un par de clases de progra funcional",
+        "difficulty": 8,
+        "time": 6
+    },
+
+    "CC3101": {
+        "name": "CC3101 - Matemáticas Discretas para la Computación",
+        "desc": "Se estudia lógica, inducción, combinatoria y teoría de grafos. Intro al álgebra 2 (?)",
+        "difficulty": 7,
+        "time": 7
+    },
+
+    "CC3102": {
+        "name": "CC3102 - Teoría de la Computación",
+        "desc": "Se estudian lenguajes regulares, autómatas, máquinas de Turing, P vs NP y complejidad computacional.",
+        "difficulty": 7,
+        "time": 2
+    },
+
+    "CC3201": {
+        "name": "CC3201 - Bases de Datos",
+        "desc": "80% Bases de datos relacionales con labs en SQL, 20% otras cosas. aka Batos",
+        "difficulty": 6,
+        "time": 5
+    },
+
+    "CC3301": {
+        "name": "CC3301 - Programación de Software de Sistemas",
+        "desc": "aka PSS. Basado en la Biblia (The C Programming Language), lo básico de programar en C, un poco de assembler y circuitos digitales",
+        "difficulty": 6,
+        "time": "?"
+    },
+
+    "CC3501": {
+        "name": "CC3501 - Modelación y Computación Gráfica para Ingenieros",
+        "desc": "aka Gráfica. Se usan herramientas de meca y lineal para dibujar y formar cosas con OpenGL",
+        "difficulty": 8,
+        "time": 8
+    },
+
+    "CC4101": {
+        "name": "CC4101 - Lenguajes de Programación",
+        "desc": "Se estudia como funciona un lenguaje de programación moderno, implementando un lenguaje propio con interprete y parser escritos en racket",
+        "difficulty": 8,
+        "time": 8
+    },
+
+    "CC4102": {
+        "name": "CC4102 - Diseño y Análisis de Algoritmos",
+        "desc": "aka Logaritmos. Encontrar la complejidad/costo de algoritmos difíciles. Se usan muchos logaritmos",
+        "difficulty": 10,
+        "time": 7
+    },
+
+    "CC4302": {
+        "name": "CC4302 - Sistemas Operativos",
+        "desc": "aka Sositos/Mateu 2. Usar paralelización con threads para ocupar bien los procesadores multi-core, PSS Electric Boogaloo",
+        "difficulty": 6,
+        "time": 6
+    }, 
+
+    "CC4303": {
+        "name": "CC4303 - Redes",
+        "desc": "Se estudia como se comunican las computadoras a través del inter-knot. Las redes son como cebollas, tienen capas.",
+        "difficulty": 4,
+        "time": 3
+    },
+
+    "CC5205": {
+        "name": "CC5205 - Minería de Datos",
+        "desc": "aka Matos. Limpieza y análisis de datos ciertos modelos.",
+        "difficulty": 7,
+        "time": "?"
+    }
+}
