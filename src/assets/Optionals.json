@@ -1,0 +1,482 @@
+{
+    "CC4001": {
+      "name": "CC4001 - Taller de Programación A",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC4002": {
+      "name": "CC4002 - Taller de Programación B",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC4005": {
+      "name": "CC4005 - Taller de Programación Competitiva A",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC4006": {
+      "name": "CC4006 - Taller de Programación Competitiva B",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC4301": {
+      "name": "CC4301 - Arquitectura de Computadores",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC4310": {
+      "name": "CC4310 - Taller de Ingeniería de Sistemas Confiables",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5002": {
+      "name": "CC5002 - Desarrollo de Aplicaciones Web",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5101": {
+      "name": "CC5101 - Análisis Avanzado de Algoritmos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5102": {
+      "name": "CC5102 - Métodos Lógicos en Ciencias de la Computación",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5109": {
+      "name": "CC5109 - Análisis Fino de Algoritmos y Estructuras de Datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5113": {
+      "name": "CC5113 - Aprendizaje Automático Bayesiano",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5114": {
+      "name": "CC5114 - Redes Neuronales y Programación Genética",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5115": {
+      "name": "CC5115 - Programación Funcional",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5116": {
+      "name": "CC5116 - Diseño e Implementación de Compiladores",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5201": {
+      "name": "CC5201 - Bases de Datos Multimedia",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5206": {
+      "name": "CC5206 - Introducción a la Minería de Datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5208": {
+      "name": "CC5208 - Visualización de Información",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5212": {
+      "name": "CC5212 - Procesamiento Masivo de Datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5213": {
+      "name": "CC5213 - Recuperación de Información Multimedia",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5214": {
+      "name": "CC5214 - Proyecto de Ciencia de Datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5215": {
+      "name": "CC5215 - Privacidad de datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5216": {
+      "name": "CC5216 - Ciencia de datos geográficos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5217": {
+      "name": "CC5217 - Ingeniería en Privacidad",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5301": {
+      "name": "CC5301 - Introducción a la Criptografía Moderna",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5303": {
+      "name": "CC5303 - Sistemas Distribuidos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5304": {
+      "name": "CC5304 - Arquitectura de Sistemas de Alta Disponibilidad",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5306": {
+      "name": "CC5306 - Computación para el Trabajo Grupal",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5312": {
+      "name": "CC5312 - Seguridad de Datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5316": {
+      "name": "CC5316 - Robótica Móvil",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5317": {
+      "name": "CC5317 - Seminario de Votación Electrónica",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5322": {
+      "name": "CC5322 - Taller de Redes De Datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5324": {
+      "name": "CC5324 - Bitcoin y Criptomonedas",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5325": {
+      "name": "CC5325 - Taller de Hacking Competitivo",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5328": {
+      "name": "CC5328 - Sistemas embebidos y sensores",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5404": {
+      "name": "CC5404 - Taller de UML",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5408": {
+      "name": "CC5408 - Taller de Diseño y Desarrollo de Videojuegos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5409": {
+      "name": "CC5409 - Taller de Videojuegos Multijugador",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5501": {
+      "name": "CC5501 - Mallas Geométricas y Aplicaciones",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5502": {
+      "name": "CC5502 - Geometría Computacional",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5504": {
+      "name": "CC5504 - Interface Humano Computador",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5508": {
+      "name": "CC5508 - Procesamiento y Análisis de Imágenes",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5509": {
+      "name": "CC5509 - Reconocimiento de Patrones",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5510": {
+      "name": "CC5510 - Diseño de Sistemas Interactivos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5511": {
+      "name": "CC5511 - Fundamentos e Ingeniería de Interacciones Humano-Computador",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5601": {
+      "name": "CC5601 - Preparación y Evaluación de Proyectos TI",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5602": {
+      "name": "CC5602 - Gestión Informática",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5604": {
+      "name": "CC5604 - Aplicaciones Empresariales sobre la Plataforma Java J2EE",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5609": {
+      "name": "CC5609 - Taller de Desarrollo Comercial",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5611": {
+      "name": "CC5611 - Ética para Ingenieros en Computación",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5613": {
+      "name": "CC5613 - Taller de Comunicación Efectiva: Caso Práctico de Lanzamiento de Producto",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5614": {
+      "name": "CC5614 - Herramientas para el Trabajo en Equipo",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5615": {
+      "name": "CC5615 - Business Analytics",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5617": {
+      "name": "CC5617 - Taller de Exploración de Oportunidades para Innovar Aplicando TI",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5618": {
+      "name": "CC5618 - Taller de Transformación Digital, una Visión Empresarial",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5619": {
+      "name": "CC5619 - Diseño e Implementación de Prototipos Digitales",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5620": {
+      "name": "CC5620 - Introducción al Derecho Informático",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5701": {
+      "name": "CC5701 - Informática Médica",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5703": {
+      "name": "CC5703 - Computación Social",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC5905": {
+      "name": "CC5905 - Trabajo Dirigido",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6104": {
+      "name": "CC6104 - Pensamiento Estadístico",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6204": {
+      "name": "CC6204 - Deep Learning",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6205": {
+      "name": "CC6205 - Procesamiento de Lenguaje Natural",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6301": {
+      "name": "CC6301 - Tópicos de Criptografía Moderna",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6401": {
+      "name": "CC6401 - Taller de Metodologías Ágiles de Desarrollo de Software",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6402": {
+      "name": "CC6402 - Taller Avanzado de Desarrollo Agil y Lean",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6409": {
+      "name": "CC6409 - Taller de Desarrollo de Proyectos de IA",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6501": {
+      "name": "CC6501 - Taller de Interacción Humano-Computador",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC6502": {
+      "name": "CC6502 - Taller de Usabilidad de Interfaces de Software",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7110": {
+      "name": "CC7110 - Lenguajes de Programación II",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7125": {
+      "name": "CC7125 - Introducción a Coq: Lógica, Tipos y Verificación",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7126": {
+      "name": "CC7126 - Análisis y Verificación de Programas",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7220": {
+      "name": "CC7220 - La Web de Datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7221": {
+      "name": "CC7221 - Reconocimiento Visual con Deep Learning",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7310": {
+      "name": "CC7310 - Análisis Fino de Algoritmos y Estructuras de Datos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7315": {
+      "name": "CC7315 - Programación Multicore",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7320": {
+      "name": "CC7320 - Estructuras de Datos Comprimidas",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7513": {
+      "name": "CC7513 - Análisis y Uso de Algoritmos Geométricos",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7515": {
+      "name": "CC7515 - Computación en GPU",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7615": {
+      "name": "CC7615 - Algoritmos Avanzados de Rendering 3D",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    },
+    "CC7910": {
+      "name": "CC7910 - Investigación en Ciencias de la Computación (Métodos, Técnicas, Perspectivas)",
+      "desc": "",
+      "difficulty": "",
+      "time": ""
+    }
+}
