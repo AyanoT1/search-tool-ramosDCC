@@ -10,18 +10,20 @@ export default function Course({
             case x > 7:
                 return base + "bg-red-500";
             case x > 5:
-                return base + "bg-yellow-400";
+                return base + "bg-amber-400";
             case x > 2:
                 return base + "bg-green-500";
+            case x==="?":
+                return base + "bg-stone-700 text-white"
             default:
                 return base + "bg-blue-200";
         }
     }
 
     return (
-        <div className="border border-gray-500 rounded-2xl p-4 pt-0 w-1/2 shadow-lg">
+        <div className="border border-gray-500 rounded-2xl p-4 pt-0 w-1/2 shadow-lg m-3">
             <div className="flex items-center justify-between">
-                <h2 className="font-bold text-3xl">{name}</h2>
+                <h2 className="font-bold text-2xl max-w-[65%]">{name}</h2>
                 <div className="flex flex-col items-end relative top-6">
                     <div className="flex justify-center items-center">
                         <p className="m-2">Tiempo dedicado:</p>
