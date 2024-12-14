@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Mandatory from "./assets/Mandatory.json";
+import Optionals from "./assets/Optionals.json"
 import Course from "./Course";
 
 export default function Searchbar() {
   const [currentList, setCourses] = useState([]);
+  const [currentSource, setSource] = useState({...Mandatory, ...Optionals})
+
 
   function defaultSearcher(e) {
     let value = e.target.value.toLowerCase();
@@ -15,11 +18,10 @@ export default function Searchbar() {
       return;
     }
 
-    const newList = Object.keys(Mandatory).filter((key) => {
-      let c = Mandatory[key];
+    const newList = Object.keys(currentSource).filter((key) => {
       return (
-        c.name.toLowerCase().includes(value) ||
-        c.desc.toLowerCase().includes(value)
+        currentSource[key].name.toLowerCase().includes(value) ||
+        currentSource[key].desc.toLowerCase().includes(value)
       );
     });
     setCourses(newList);
@@ -48,10 +50,10 @@ export default function Searchbar() {
           return (
             <Course
               key={key}
-              name={Mandatory[key].name}
-              desc={Mandatory[key].desc}
-              difficulty={Mandatory[key].difficulty}
-              time={Mandatory[key].time}
+              name={currentSource[key].name}
+              desc={currentSource[key].desc}
+              difficulty={currentSource[key].difficulty}
+              time={currentSource[key].time}
             />
           );
         })}
