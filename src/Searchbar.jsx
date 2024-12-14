@@ -25,20 +25,6 @@ export default function Searchbar() {
     setCourses(newList);
   }
 
-  function displayList() {
-    return currentList.map((key) => {
-      let c = Mandatory[key];
-      return (
-        <Course
-          key={key}
-          name={c.name}
-          desc={c.desc}
-          difficulty={c.difficulty}
-          time={c.time}
-        />
-      );
-    });
-  }
 
   return (
     <>
@@ -58,7 +44,17 @@ export default function Searchbar() {
       </div>
 
       <div className="flex items-center flex-col w-screen absolute top-48">
-        {displayList()}
+        {currentList.map((key) => {
+          return (
+            <Course
+              key={key}
+              name={Mandatory[key].name}
+              desc={Mandatory[key].desc}
+              difficulty={Mandatory[key].difficulty}
+              time={Mandatory[key].time}
+            />
+          );
+        })}
       </div>
     </>
   );
