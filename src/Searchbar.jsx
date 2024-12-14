@@ -30,7 +30,7 @@ export default function Searchbar() {
 
   return (
     <>
-      <div className="flex items-center flex-col w-screen absolute top-32">
+      <div name="search-bar"  className="flex items-center flex-col w-screen absolute top-32">
         <div className="w-1/2 flex items-center">
           <input
             onChange={defaultSearcher}
@@ -45,7 +45,7 @@ export default function Searchbar() {
         </div>
       </div>
 
-      <div className="flex items-center flex-col w-screen absolute top-48">
+      <div name="course-list"  className="flex items-center flex-col w-screen absolute top-48">
         {currentList.map((key) => {
           return (
             <Course
