@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Mandatory from "./assets/Mandatory.json";
-import Optionals from "./assets/Optionals.json";
 import Course from "./Course";
 
 export default function Searchbar() {
@@ -12,7 +11,8 @@ export default function Searchbar() {
     let value = e.target.value.toLowerCase();
 
     if (value === "") {
-      return setCourses([]);
+      setCourses([]);
+      return;
     }
 
     const newList = Object.keys(Mandatory).filter((key) => {
@@ -57,7 +57,9 @@ export default function Searchbar() {
         </div>
       </div>
 
-      <div className="flex items-center flex-col w-screen absolute top-48"></div>
+      <div className="flex items-center flex-col w-screen absolute top-48">
+        {displayList()}
+      </div>
     </>
   );
 }
