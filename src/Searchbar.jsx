@@ -1,17 +1,21 @@
 import React, {useState} from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
-import courses from "./assets/courses.json"
+import Mandatory from './assets/Mandatory.json'
+import Optionals from './assets/Optionals.json'
 import Course from './Course';
 
 export default function Searchbar() {
 
-    const [currentList, setCourses] = useState(Object.keys(courses));
+    const [currentList, setCourses] = useState([]);
 
     function defaultSearcher(e) {
         let value = e.target.value.toLowerCase();
-        const newList = Object.keys(courses).filter( (key) => {
-            let c = courses[key];
+
+        if (value==="") { return setCourses([]) }
+
+        const newList = Object.keys(Mandatory).filter( (key) => {
+            let c = Mandatory[key];
             return c.name.toLowerCase().includes(value) || c.desc.toLowerCase().includes(value)
         })
         setCourses(newList)
@@ -19,7 +23,7 @@ export default function Searchbar() {
 
     function displayList() { 
         return currentList.map((key) => {
-            let c = courses[key];
+            let c = Mandatory[key];
             return <Course key={key} name={c.name} desc={c.desc} difficulty={c.difficulty} time={c.time}/>
             })
     }
