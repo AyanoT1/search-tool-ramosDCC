@@ -9,6 +9,7 @@ export default function Searchbar() {
   const [currentList, setCourses] = useState([]);
   const [currentSource, setSource] = useState({ ...Mandatory, ...Optionals });
   const [sortBy, setSortBy] = useState("name");
+  const [isReversed, setReversed] = useState(false);
   
   const sourceMapping = {
     Todos: { ...Mandatory, ...Optionals },
@@ -30,7 +31,7 @@ export default function Searchbar() {
       }
   }
 
-  function genericSearch(pattern, source=currentSource, sorting=sortBy) {
+  function genericSearch(pattern, source=currentSource, sorting=sortBy, reversion=isReversed) {
     if (pattern == "") {
       return [];
     }
@@ -41,7 +42,9 @@ export default function Searchbar() {
         source[key].desc != ""
       );
     });
-    return results.sort(sortMapping(sorting, source));
+
+    results.sort(sortMapping(sorting, source))
+    return (reversion) ?  results.reverse() : results;
   }
 
   function defaultSearcher(e) {
@@ -59,6 +62,12 @@ export default function Searchbar() {
     setSortBy(e.target.value)
     let query = document.getElementById("searchbar-input").value.toLowerCase();
     setCourses(genericSearch(query, currentSource, e.target.value))
+  }
+
+  function handleReverseOrder(e) {
+    setReversed(e.target.checked)
+    let query = document.getElementById("searchbar-input").value.toLowerCase();
+    setCourses(genericSearch(query, currentSource, sortBy, e.target.checked))
   }
 
   return (
@@ -122,7 +131,7 @@ export default function Searchbar() {
             <option value="difficulty">Dificultad</option>
             <option value="time">Tiempo dedicado </option>
           </select> <br/>
-          <input type="checkbox" /> Invertir orden
+          <input type="checkbox" onChange={handleReverseOrder}/> Invertir orden
         </div>
       </div>
 
