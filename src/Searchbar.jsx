@@ -14,40 +14,28 @@ export default function Searchbar() {
     Electivos: Optionals,
   };
 
-  function defaultSearcher(e) {
-    let value = e.target.value.toLowerCase();
-
-    if (value === "") {
-      setCourses([]);
-      return;
+  function genericSearch(pattern, source) {
+    if (pattern == "") {
+      return []
     }
+    const results = Object.keys(source).filter((key) => {
+      return( 
+      source[key].name.toLowerCase().includes(pattern.toLowerCase()) ||
+      source[key].desc.toLowerCase().includes(pattern.toLowerCase()))
+    })
 
-    const newList = Object.keys(currentSource).filter((key) => {
-      return (
-        currentSource[key].name.toLowerCase().includes(value) ||
-        currentSource[key].desc.toLowerCase().includes(value)
-      );
-    });
-    setCourses(newList);
+    return results
+  }
+
+  function defaultSearcher(e) {
+    setCourses(genericSearch(e.target.value,currentSource));
   }
 
   function handleSourceChange(e) {
     let newSource = sourceMapping[e.target.value];
     setSource(newSource);
     let query = document.getElementById("searchbar-input").value.toLowerCase();
-
-    if (query === "") {
-      setCourses([]);
-      return;
-    }
-
-    const newList = Object.keys(newSource).filter((key) => {
-      return (
-        newSource[key].name.toLowerCase().includes(query) ||
-        newSource[key].desc.toLowerCase().includes(query)
-      );
-    });
-    setCourses(newList);
+    setCourses(genericSearch(query, newSource));
   }
 
   return (
