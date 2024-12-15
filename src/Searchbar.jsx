@@ -8,7 +8,7 @@ import Course from "./Course";
 export default function Searchbar() {
   const [currentList, setCourses] = useState([]);
   const [currentSource, setSource] = useState({ ...Mandatory, ...Optionals });
-  const [sortBy, setSortBy] = useState("name");
+  const [sortBy, setSortBy] = useState("code");
   const [isReversed, setReversed] = useState(false);
   
   const sourceMapping = {
@@ -19,15 +19,17 @@ export default function Searchbar() {
 
   function sortMapping(option, source) {
 
-    const parseNan = (x) => (isNaN(x)) ? 999 : parseInt(x) 
+    const convertNaN = (x) => (isNaN(x)) ? 999 : parseInt(x) 
 
     switch(option) {
       case "name":
+        return (a,b) => source[a].name.slice(8).localeCompare(source[b].name.slice(8), undefined, { sensitivity: 'base' })
+      case "code":
         return (a,b) => source[a].name.localeCompare(source[b].name, undefined, { sensitivity: 'base' })
       case "difficulty":
-        return (a,b) => parseNan(source[a].difficulty) - parseNan(source[b].difficulty)
+        return (a,b) => convertNaN(source[a].difficulty) - convertNaN(source[b].difficulty)
       case "time":
-        return (a,b) => parseNan(source[a].time) - parseNan(source[b].time)
+        return (a,b) => convertNaN(source[a].time) - convertNaN(source[b].time)
       }
   }
 
@@ -127,6 +129,7 @@ export default function Searchbar() {
           <h3 className="font-semibold mt-2">Ordenar por:</h3>
           <hr className="border-gray-400" />
           <select name="sorting" id="sort-filter" onChange={handleSortByChange} className="mt-2 h-7 rounded-md pl-2">
+            <option value="code">Código</option>
             <option value="name">Nombre</option>
             <option value="difficulty">Dificultad</option>
             <option value="time">Tiempo dedicado </option>
