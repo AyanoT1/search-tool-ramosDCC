@@ -26,6 +26,10 @@ export default function Searchbar() {
     setCourses(newList);
   }
 
+  function handleSourceChange(e) {
+    console.log(e.target.value)
+  }
+
   return (
     <>
       <div name="search-bar"
@@ -53,23 +57,20 @@ export default function Searchbar() {
         <div>
           <h3 className="font-semibold mt-2">Ramos:</h3>
           <hr className="border-gray-400" />
-          {[
-            [{ ...Mandatory, ...Optionals }, "Todos"],
-            [Mandatory, "Obligatorios"],
-            [Optionals, "Electivos"],
-          ].map((s, index) => {
+          {["Todos", "Obgligatorios", "Electivos"].map((s, index) => {
             return (
-              <div>
+              <div key={index}>
                 <input
                   type="radio"
                   name="sourceSelector"
-                  id={index}
-                  value={s[0]}
+                  id={"source"+index}
+                  value={s}
                   defaultChecked={index == 0}
+                  onChange={handleSourceChange}
                   className="m-1 "
                 />
                 <label htmlFor={index} className="p-1">
-                  {s[1]}
+                  {s}
                 </label>
               </div>
             );
