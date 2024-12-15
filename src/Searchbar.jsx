@@ -8,13 +8,29 @@ import Course from "./Course";
 export default function Searchbar() {
   const [currentList, setCourses] = useState([]);
   const [currentSource, setSource] = useState({ ...Mandatory, ...Optionals });
+  const [sortBy, setSortBy] = useState("name");
+  
   const sourceMapping = {
     Todos: { ...Mandatory, ...Optionals },
     Obligatorios: Mandatory,
     Electivos: Optionals,
   };
 
-  function genericSearch(pattern, source) {
+  function sortMapping(option, source) {
+
+    const parseNan = (x) => (isNaN(x)) ? 999 : parseInt(x) 
+
+    switch(option) {
+      case "name":
+        return (a,b) => source[a].name.localeCompare(source[b].name, undefined, { sensitivity: 'base' })
+      case "difficulty":
+        return (a,b) => parseNan(source[a].difficulty) - parseNan(source[b].difficulty)
+      case "time":
+        return (a,b) => parseNan(source[a].time) - parseNan(source[b].time)
+      }
+  }
+
+  function genericSearch(pattern, source=currentSource, sorting=sortBy) {
     if (pattern == "") {
       return [];
     }
@@ -25,12 +41,11 @@ export default function Searchbar() {
         source[key].desc != ""
       );
     });
-
-    return results;
+    return results.sort(sortMapping(sorting, source));
   }
 
   function defaultSearcher(e) {
-    setCourses(genericSearch(e.target.value, currentSource));
+    setCourses(genericSearch(e.target.value));
   }
 
   function handleSourceChange(e) {
@@ -38,6 +53,12 @@ export default function Searchbar() {
     setSource(newSource);
     let query = document.getElementById("searchbar-input").value.toLowerCase();
     setCourses(genericSearch(query, newSource));
+  }
+
+  function handleSortByChange(e) {
+    setSortBy(e.target.value)
+    let query = document.getElementById("searchbar-input").value.toLowerCase();
+    setCourses(genericSearch(query, currentSource, e.target.value))
   }
 
   return (
@@ -69,6 +90,7 @@ export default function Searchbar() {
       >
         <h2 className="text-2xl">Filters</h2>
         <hr className="border-gray-400 border" />
+        {/* Source filter */}
         <div>
           <h3 className="font-semibold mt-2">Ramos:</h3>
           <hr className="border-gray-400" />
@@ -91,13 +113,14 @@ export default function Searchbar() {
             );
           })}
         </div>
+        {/* Sort by filter */}
         <div>
           <h3 className="font-semibold mt-2">Ordenar por:</h3>
           <hr className="border-gray-400" />
-          <select name="sorting" id="sort-filter" className="mt-2 h-7 rounded-md pl-2">
-            <option value="">Nombre</option>
-            <option value="">Dificultad</option>
-            <option value="">Tiempo dedicado </option>
+          <select name="sorting" id="sort-filter" onChange={handleSortByChange} className="mt-2 h-7 rounded-md pl-2">
+            <option value="name">Nombre</option>
+            <option value="difficulty">Dificultad</option>
+            <option value="time">Tiempo dedicado </option>
           </select> <br/>
           <input type="checkbox" /> Invertir orden
         </div>
