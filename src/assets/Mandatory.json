@@ -71,7 +71,7 @@
 
     "CC4303": {
         "name": "CC4303 - Redes",
-        "desc": "Se estudia como se comunican las computadoras a través del inter-knot. Las redes son como cebollas, tienen capas.",
+        "desc": "Se estudia como se comunican las computadoras a través del internet. Las redes son como cebollas, tienen capas.",
         "difficulty": 4,
         "time": 3
     },

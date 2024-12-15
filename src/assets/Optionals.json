@@ -1,9 +1,9 @@
 {
     "CC4001": {
       "name": "CC4001 - Taller de Programación A",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Técnicas de resolución de problemas de programación",
+      "difficulty": "5",
+      "time": "?"
     },
     "CC4002": {
       "name": "CC4002 - Taller de Programación B",
@@ -13,9 +13,9 @@
     },
     "CC4005": {
       "name": "CC4005 - Taller de Programación Competitiva A",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Técnicas de resolución de problemas de programación competitiva de forma grupal",
+      "difficulty": "6",
+      "time": "?"
     },
     "CC4006": {
       "name": "CC4006 - Taller de Programación Competitiva B",
@@ -37,15 +37,15 @@
     },
     "CC5002": {
       "name": "CC5002 - Desarrollo de Aplicaciones Web",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Introducción al desarrollo de aplicaciones web, se empieza por un bosquejo estático con HTML, CSS y JS y después se implementa un backend en Flask y después en SpringBoot. Se ocupa MySQL para la base de datos del backend (buena oportunidad para aprender Docker o cualquier tecnología que les interese en el desarrollo web)",
+      "difficulty": "6",
+      "time": "7"
     },
     "CC5101": {
       "name": "CC5101 - Análisis Avanzado de Algoritmos",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Métodos de combinatoria y probabilidades para analizar algoritmos o funciones/ecuaciones relacionadas a ellos",
+      "difficulty": "6",
+      "time": "?"
     },
     "CC5102": {
       "name": "CC5102 - Métodos Lógicos en Ciencias de la Computación",
@@ -67,21 +67,21 @@
     },
     "CC5114": {
       "name": "CC5114 - Redes Neuronales y Programación Genética",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Como implementar una red neuronal desde 0",
+      "difficulty": "5",
+      "time": "?"
     },
     "CC5115": {
       "name": "CC5115 - Programación Funcional",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Dedicado a entender todos los aspectos Haskell, un lenguaje puramente funcional.",
+      "difficulty": "6",
+      "time": "6"
     },
     "CC5116": {
       "name": "CC5116 - Diseño e Implementación de Compiladores",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Entender compiladores implementando uno desde 0, con toda la teoría, lógica, técnicas y herramientas básicas para desarrollarlo",
+      "difficulty": "8",
+      "time": "?"
     },
     "CC5201": {
       "name": "CC5201 - Bases de Datos Multimedia",
@@ -91,27 +91,27 @@
     },
     "CC5206": {
       "name": "CC5206 - Introducción a la Minería de Datos",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Limpieza y análisis de datos según modelos enseñados en el curso. Se trabajan con clusters y regresiones lineales.",
+      "difficulty": "7",
+      "time": "?"
     },
     "CC5208": {
       "name": "CC5208 - Visualización de Información",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Técnicas de visualización de la información y la percepción humana. Gráficos 'eficientes' y 'entendibles' ",
+      "difficulty": "4",
+      "time": "5"
     },
     "CC5212": {
       "name": "CC5212 - Procesamiento Masivo de Datos",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "aka Bases de Datos 2, Batos2. Cómo procesar enormes cantidades de datos usando computación distribuida, recuperación de la información y bases de datos NoSQL",
+      "difficulty": "4",
+      "time": "2"
     },
     "CC5213": {
       "name": "CC5213 - Recuperación de Información Multimedia",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Búsquedas de contenido multimedia como buscar imágenes similares o la canción que pertenece a un segmento de audio",
+      "difficulty": "6",
+      "time": "6"
     },
     "CC5214": {
       "name": "CC5214 - Proyecto de Ciencia de Datos",
@@ -139,9 +139,9 @@
     },
     "CC5301": {
       "name": "CC5301 - Introducción a la Criptografía Moderna",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Sistemas que se han utilizado y que actualmente se utilizan en la criptografía, cómo se usan y por qué son importantes en la criptografía",
+      "difficulty": "8",
+      "time": "?"
     },
     "CC5303": {
       "name": "CC5303 - Sistemas Distribuidos",
@@ -151,9 +151,9 @@
     },
     "CC5304": {
       "name": "CC5304 - Arquitectura de Sistemas de Alta Disponibilidad",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Datacenters: seguridad y hardware",
+      "difficulty": "2",
+      "time": "1"
     },
     "CC5306": {
       "name": "CC5306 - Computación para el Trabajo Grupal",
@@ -163,9 +163,9 @@
     },
     "CC5312": {
       "name": "CC5312 - Seguridad de Datos",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Ramo introductorio de ciberseguridad. Un poco de criptografía, principios de seguridad, malware, cibercrimen, privacidad.",
+      "difficulty": "6",
+      "time": "?"
     },
     "CC5316": {
       "name": "CC5316 - Robótica Móvil",
@@ -193,27 +193,27 @@
     },
     "CC5325": {
       "name": "CC5325 - Taller de Hacking Competitivo",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Descifrar texto encriptado, robar cookies, acceder a root. Se resuelven problemas de CTF (capture the flag) con estenografía, criptografía moderna, apps web, análisis forense, ingeniería reversa, pwning y OSINT",
+      "difficulty": "6",
+      "time": "6"
     },
     "CC5328": {
       "name": "CC5328 - Sistemas embebidos y sensores",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Bases del diseño e implementación de sensorización a través de sistemas embebidos, de los fundamentos y aplicaciones de la sensorización industrial, procesos generadores de datos y análisis exploratorios de datos para la resolución de problemas de monitoreo de condiciones de maquinaria industrial.",
+      "difficulty": "?",
+      "time": "?"
     },
     "CC5404": {
       "name": "CC5404 - Taller de UML",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Modelar la solución de un proyecto mediante diagramas UML",
+      "difficulty": "5",
+      "time": "1"
     },
     "CC5408": {
       "name": "CC5408 - Taller de Diseño y Desarrollo de Videojuegos",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Desarrollar un juego en grupo. Se usa principalmente Godot Engine pero el grupo es libre de ocupar otro motor como Unity o Unreal.",
+      "difficulty": "4",
+      "time": "8"
     },
     "CC5409": {
       "name": "CC5409 - Taller de Videojuegos Multijugador",
@@ -223,9 +223,9 @@
     },
     "CC5501": {
       "name": "CC5501 - Mallas Geométricas y Aplicaciones",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Construcción de triangulaciones. Refinar y mejorar mallas.",
+      "difficulty": "4",
+      "time": "?"
     },
     "CC5502": {
       "name": "CC5502 - Geometría Computacional",
@@ -249,19 +249,19 @@
       "name": "CC5509 - Reconocimiento de Patrones",
       "desc": "",
       "difficulty": "",
-      "time": ""
+      "time": "?"
     },
     "CC5510": {
       "name": "CC5510 - Diseño de Sistemas Interactivos",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Introducción a la interacción humano-computador. Principios de diseño y usabilidad, metodologías de prototipado y de evaluación de diseños",
+      "difficulty": "6",
+      "time": "?"
     },
     "CC5511": {
       "name": "CC5511 - Fundamentos e Ingeniería de Interacciones Humano-Computador",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "UX y UI en forma teórica",
+      "difficulty": "4",
+      "time": "?"
     },
     "CC5601": {
       "name": "CC5601 - Preparación y Evaluación de Proyectos TI",
@@ -319,9 +319,9 @@
     },
     "CC5618": {
       "name": "CC5618 - Taller de Transformación Digital, una Visión Empresarial",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Como modernizar algún negocio viejo. Como ordenar e identificar las aristas de un negocio.",
+      "difficulty": "1",
+      "time": "1"
     },
     "CC5619": {
       "name": "CC5619 - Diseño e Implementación de Prototipos Digitales",
@@ -349,9 +349,9 @@
     },
     "CC5905": {
       "name": "CC5905 - Trabajo Dirigido",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Trabajas en un proyecto con apoyo de un profe",
+      "difficulty": "?",
+      "time": "?"
     },
     "CC6104": {
       "name": "CC6104 - Pensamiento Estadístico",
@@ -361,15 +361,15 @@
     },
     "CC6204": {
       "name": "CC6204 - Deep Learning",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Programar una red neuronal a mano, algoritmos de optimización, regularización. Redes neuronales convolucionales y redes neuronales recurrentes.",
+      "difficulty": "6",
+      "time": "6"
     },
     "CC6205": {
       "name": "CC6205 - Procesamiento de Lenguaje Natural",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Técnicas que existen para procesar texto: texto de input => output a partir del input. Enfoques como Naive Bayes, con machine learning y deep learning.",
+      "difficulty": "8",
+      "time": "6"
     },
     "CC6301": {
       "name": "CC6301 - Tópicos de Criptografía Moderna",
@@ -379,12 +379,12 @@
     },
     "CC6401": {
       "name": "CC6401 - Taller de Metodologías Ágiles de Desarrollo de Software",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Desarrollar una App Web siguiendo metodologías ágiles usando Django, Docker, AWS, GitLab.",
+      "difficulty": "4",
+      "time": "4"
     },
     "CC6402": {
-      "name": "CC6402 - Taller Avanzado de Desarrollo Agil y Lean",
+      "name": "CC6402 - Taller Avanzado de Desarrollo Ágil y Lean",
       "desc": "",
       "difficulty": "",
       "time": ""
@@ -427,15 +427,15 @@
     },
     "CC7220": {
       "name": "CC7220 - La Web de Datos",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Watos. Web semántica, especificaciones RDF y OWL, SPARQL para hacer consultas RDF.",
+      "difficulty": "6",
+      "time": "?"
     },
     "CC7221": {
       "name": "CC7221 - Reconocimiento Visual con Deep Learning",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Visión por computadora, reconocimiento de qué objetos y cuántos hay presentes en el input",
+      "difficulty": "8",
+      "time": "?"
     },
     "CC7310": {
       "name": "CC7310 - Análisis Fino de Algoritmos y Estructuras de Datos",
@@ -451,9 +451,9 @@
     },
     "CC7320": {
       "name": "CC7320 - Estructuras de Datos Comprimidas",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Se estudia teóricamente estructuras de datos que comprimen información pero que permiten ciertas operaciones y consultas sobre ellas. Se finaliza con una implementación de alguna estructura.",
+      "difficulty": "6",
+      "time": "?"
     },
     "CC7513": {
       "name": "CC7513 - Análisis y Uso de Algoritmos Geométricos",
@@ -463,9 +463,9 @@
     },
     "CC7515": {
       "name": "CC7515 - Computación en GPU",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "OpenGL moderno (shaders), formas de interactuar con la GPU de forma directa con OpenCL y CUDA, mas interoperabilidad entre ambos métodos de trabajo. El curso utiliza C++ y se recomienda tener un PC con tarjeta gráfica NVIDIA para programar con CUDA, en caso de no tener la profe tiene un servidor para trabajar en CUDA al cual uno se puede conectar por ssh.",
+      "difficulty": "8",
+      "time": "8"
     },
     "CC7615": {
       "name": "CC7615 - Algoritmos Avanzados de Rendering 3D",
@@ -475,8 +475,8 @@
     },
     "CC7910": {
       "name": "CC7910 - Investigación en Ciencias de la Computación (Métodos, Técnicas, Perspectivas)",
-      "desc": "",
-      "difficulty": "",
-      "time": ""
+      "desc": "Aprender a desarrollar una investigación, desde el planteamiento del problema hasta el planteamiento los experimentos y muestras de datos. Además, se ven charlas y se lee un libro para poder interiorizarse más en el área de la investigación.",
+      "difficulty": "5",
+      "time": "1"
     }
 }
