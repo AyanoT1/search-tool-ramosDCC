@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import Mandatory from "./assets/Mandatory.json";
@@ -16,19 +16,21 @@ export default function Searchbar() {
 
   function genericSearch(pattern, source) {
     if (pattern == "") {
-      return []
+      return [];
     }
     const results = Object.keys(source).filter((key) => {
-      return( 
-      source[key].name.toLowerCase().includes(pattern.toLowerCase()) ||
-      source[key].desc.toLowerCase().includes(pattern.toLowerCase()))
-    })
+      return (
+        (source[key].name.toLowerCase().includes(pattern.toLowerCase()) ||
+          source[key].desc.toLowerCase().includes(pattern.toLowerCase())) &&
+        source[key].desc != ""
+      );
+    });
 
-    return results
+    return results;
   }
 
   function defaultSearcher(e) {
-    setCourses(genericSearch(e.target.value,currentSource));
+    setCourses(genericSearch(e.target.value, currentSource));
   }
 
   function handleSourceChange(e) {
@@ -50,7 +52,7 @@ export default function Searchbar() {
             onChange={defaultSearcher}
             id="searchbar-input"
             type="text"
-            className="border w-full rounded-full p-2 pl-4 bg-gray-100 border-gray-400 shadow-md"
+            className="border w-full rounded-full p-2 pl-4 border-gray-400 shadow-md"
             placeholder="Busca info de tu ramo aquí"
           />
           <FontAwesomeIcon
@@ -63,7 +65,7 @@ export default function Searchbar() {
       {/* Filter */}
       <div
         name="filter-box"
-        className="border border-gray-400 rounded-lg shadow-md p-6 m-10 fixed top-52 z-10"
+        className="border border-gray-400 rounded-lg shadow-md p-5 pl-7 pr-7 m-10 fixed top-52 z-10"
       >
         <h2 className="text-2xl">Filters</h2>
         <hr className="border-gray-400 border" />
@@ -88,6 +90,16 @@ export default function Searchbar() {
               </div>
             );
           })}
+        </div>
+        <div>
+          <h3 className="font-semibold mt-2">Ordenar por:</h3>
+          <hr className="border-gray-400" />
+          <select name="sorting" id="sort-filter" className="mt-2 h-7 rounded-md pl-2">
+            <option value="">Nombre</option>
+            <option value="">Dificultad</option>
+            <option value="">Tiempo dedicado </option>
+          </select> <br/>
+          <input type="checkbox" /> Invertir orden
         </div>
       </div>
 
