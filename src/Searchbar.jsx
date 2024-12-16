@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import Mandatory from "./assets/Mandatory.json";
 import Optionals from "./assets/Optionals.json";
 import Course from "./Course";
 
 export default function Searchbar() {
-  const [currentList, setCourses] = useState([]);
+  const [currentList, setCourses] = useState(Object.keys({ ...Mandatory, ...Optionals }));
   const [currentSource, setSource] = useState({ ...Mandatory, ...Optionals });
   const [sortBy, setSortBy] = useState("code");
   const [isReversed, setReversed] = useState(false);
@@ -35,9 +35,7 @@ export default function Searchbar() {
   }
 
   function genericSearch(pattern, source=currentSource, sorting=sortBy, reversion=isReversed, tag=selectedArea) {
-    if (pattern == "") {
-      return [];
-    }
+
     var results = Object.keys(source).filter((key) => {
       return (
         (source[key].name.toLowerCase().includes(pattern.toLowerCase()) ||
@@ -99,7 +97,7 @@ export default function Searchbar() {
             id="searchbar-input"
             type="text"
             className="border w-full rounded-full p-2 pl-4 border-gray-400 shadow-md"
-            placeholder="Busca info de tu ramo aquí"
+            placeholder="Busca tema específico aquí"
           />
           <FontAwesomeIcon
             icon={faMagnifyingGlass}
@@ -180,6 +178,17 @@ export default function Searchbar() {
 
       </div>
 
+      {/* Info */}
+      <div
+        name="about"
+        className="border border-gray-400 rounded-lg shadow-md p-5 pl-7 pr-7 m-10 absolute top-1/4 right-4 w-44"
+      >
+        <h2 className="text-md border-b"><FontAwesomeIcon icon={faCircleInfo} /> Sobre la app</h2>
+        <p className="text-sm">Buscador basado en <a href="https://ramos.cadcc.cl/">RamosCC</a> de la página del CaDCC. <br /><br />
+        El tiempo dedicado de 6 es aprox el valor en créditos del ramo. <br /><br />
+        La barra busca dentro del nombre y descripción.
+        </p>
+      </div>
       {/* Displayer */}
       <div
         name="course-list"
