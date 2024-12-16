@@ -1,41 +1,64 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMagnifyingGlass,
+  faCircleInfo,
+} from "@fortawesome/free-solid-svg-icons";
 import Mandatory from "./assets/Mandatory.json";
 import Optionals from "./assets/Optionals.json";
 import Course from "./Course";
 
 export default function Searchbar() {
-  const [currentList, setCourses] = useState(Object.keys({ ...Mandatory, ...Optionals }));
+  const [currentList, setCourses] = useState(
+    Object.keys({ ...Mandatory, ...Optionals })
+  );
   const [currentSource, setSource] = useState({ ...Mandatory, ...Optionals });
   const [sortBy, setSortBy] = useState("code");
   const [isReversed, setReversed] = useState(false);
   const [selectedArea, setArea] = useState("");
-  
+
   const sourceMapping = {
     Todos: { ...Mandatory, ...Optionals },
     Obligatorios: Mandatory,
     Electivos: Optionals,
   };
 
-  function sortMapping(option, source) {
-
-    const convertNaN = (x) => (isNaN(x)) ? 999 : parseInt(x) 
-
-    switch(option) {
-      case "name":
-        return (a,b) => source[a].name.slice(8).localeCompare(source[b].name.slice(8), undefined, { sensitivity: 'base' })
-      case "code":
-        return (a,b) => source[a].name.localeCompare(source[b].name, undefined, { sensitivity: 'base' })
-      case "difficulty":
-        return (a,b) => convertNaN(source[a].difficulty) - convertNaN(source[b].difficulty)
-      case "time":
-        return (a,b) => convertNaN(source[a].time) - convertNaN(source[b].time)
-      }
+  function getQuery() {
+    return document.getElementById("searchbar-input").value.toLowerCase();
   }
 
-  function genericSearch(pattern, source=currentSource, sorting=sortBy, reversion=isReversed, tag=selectedArea) {
+  function getSortFunction(option, source) {
+    const convertNaN = (x) => (isNaN(x) ? 999 : parseInt(x));
 
+    switch (option) {
+      case "name":
+        return (a, b) =>
+          source[a].name
+            .slice(8)
+            .localeCompare(source[b].name.slice(8), undefined, {
+              sensitivity: "base",
+            });
+      case "code":
+        return (a, b) =>
+          source[a].name.localeCompare(source[b].name, undefined, {
+            sensitivity: "base",
+          });
+      case "difficulty":
+        return (a, b) =>
+          convertNaN(source[a].difficulty) - convertNaN(source[b].difficulty);
+      case "time":
+        return (a, b) =>
+          convertNaN(source[a].time) - convertNaN(source[b].time);
+    }
+  }
+
+  function genericSearch(
+    pattern,
+    source = currentSource,
+    sorting = sortBy,
+    reversion = isReversed,
+    tag = selectedArea
+  ) {
     var results = Object.keys(source).filter((key) => {
       return (
         (source[key].name.toLowerCase().includes(pattern.toLowerCase()) ||
@@ -44,44 +67,50 @@ export default function Searchbar() {
       );
     });
 
-    if (!tag=="") {
+    if (!tag == "") {
       results = results.filter((key) => {
-        return source[key].tags.includes(tag)
-      })
-      console.log(results)
+        return source[key].tags.includes(tag);
+      });
+      console.log(results);
     }
 
-    results.sort(sortMapping(sorting, source))
-    return (reversion) ?  results.reverse() : results;
+    results.sort(getSortFunction(sorting, source));
+    return reversion ? results.reverse() : results;
   }
 
-  function defaultSearcher(e) {
+  function handleInputSearch(e) {
     setCourses(genericSearch(e.target.value));
   }
 
   function handleSourceChange(e) {
     let newSource = sourceMapping[e.target.value];
     setSource(newSource);
-    let query = document.getElementById("searchbar-input").value.toLowerCase();
-    setCourses(genericSearch(query, newSource));
+    setCourses(genericSearch(getQuery(), newSource));
   }
 
   function handleSortByChange(e) {
-    setSortBy(e.target.value)
-    let query = document.getElementById("searchbar-input").value.toLowerCase();
-    setCourses(genericSearch(query, currentSource, e.target.value))
+    setSortBy(e.target.value);
+    setCourses(genericSearch(getQuery(), currentSource, e.target.value));
   }
 
   function handleReverseOrder(e) {
-    setReversed(e.target.checked)
-    let query = document.getElementById("searchbar-input").value.toLowerCase();
-    setCourses(genericSearch(query, currentSource, sortBy, e.target.checked))
+    setReversed(e.target.checked);
+    setCourses(
+      genericSearch(getQuery(), currentSource, sortBy, e.target.checked)
+    );
   }
 
   function handleAreaChange(e) {
-    setArea(e.target.value)
-    let query = document.getElementById("searchbar-input").value.toLowerCase();
-    setCourses(genericSearch(query, currentSource, sortBy, isReversed, e.target.value))
+    setArea(e.target.value);
+    setCourses(
+      genericSearch(
+        getQuery(),
+        currentSource,
+        sortBy,
+        isReversed,
+        e.target.value
+      )
+    );
   }
 
   return (
@@ -93,7 +122,7 @@ export default function Searchbar() {
       >
         <div className="w-1/2 flex items-center">
           <input
-            onChange={defaultSearcher}
+            onChange={handleInputSearch}
             id="searchbar-input"
             type="text"
             className="border w-full rounded-full p-2 pl-4 border-gray-400 shadow-md"
@@ -142,40 +171,50 @@ export default function Searchbar() {
         <div>
           <h3 className="font-semibold mt-2">Ordenar por:</h3>
           <hr className="border-gray-400" />
-          <select name="sorting" id="sort-filter" onChange={handleSortByChange} className="mt-2 h-7 rounded-md pl-2">
+          <select
+            name="sorting"
+            id="sort-filter"
+            onChange={handleSortByChange}
+            className="mt-2 h-7 rounded-md pl-2"
+          >
             <option value="code">Código</option>
             <option value="name">Nombre</option>
             <option value="difficulty">Dificultad</option>
             <option value="time">Tiempo dedicado </option>
-          </select> <br/>
-          <input type="checkbox" onChange={handleReverseOrder}/> Invertir orden
+          </select>{" "}
+          <br />
+          <input type="checkbox" onChange={handleReverseOrder} /> Invertir orden
         </div>
 
         {/* Category Filter */}
         <div>
-        <h3 className="font-semibold mt-2">Área:</h3>
-        <hr className="border-gray-400" />
-        <select name="sorting" id="sort-filter" onChange={handleAreaChange}  className="mt-2 h-7 rounded-md pl-2">
-          <option value="">Cualquiera</option>
-          <option value="Programación">Programación</option>
-          <option value="Software">Software</option>
-          <option value="Datos">Datos</option>
-          <option value="Teoría">Teoría</option>
-          <option value="HCI">HCI</option>
-          <option value="Apps web (opcional)">Apps web (opcional)</option>
-          <option value="Apps web">Apps web</option>
-          <option value="Gráfica">Gráfica</option>
-          <option value="Sistemas">Sistemas</option>
-          <option value="Arquitectura">Arquitectura</option>
-          <option value="Seguridad">Seguridad</option>
-          <option value="Machine Learning">Machine Learning</option>
-          <option value="Industria">Industria</option>
-          <option value="Investigación">Investigación</option>
-          <option value="Redes">Redes</option>
-          <option value="Lenguajes">Lenguajes</option>
-        </select>
+          <h3 className="font-semibold mt-2">Área:</h3>
+          <hr className="border-gray-400" />
+          <select
+            name="sorting"
+            id="sort-filter"
+            onChange={handleAreaChange}
+            className="mt-2 h-7 rounded-md pl-2"
+          >
+            <option value="">Cualquiera</option>
+            <option value="Programación">Programación</option>
+            <option value="Software">Software</option>
+            <option value="Datos">Datos</option>
+            <option value="Teoría">Teoría</option>
+            <option value="HCI">HCI</option>
+            <option value="Apps web (opcional)">Apps web (opcional)</option>
+            <option value="Apps web">Apps web</option>
+            <option value="Gráfica">Gráfica</option>
+            <option value="Sistemas">Sistemas</option>
+            <option value="Arquitectura">Arquitectura</option>
+            <option value="Seguridad">Seguridad</option>
+            <option value="Machine Learning">Machine Learning</option>
+            <option value="Industria">Industria</option>
+            <option value="Investigación">Investigación</option>
+            <option value="Redes">Redes</option>
+            <option value="Lenguajes">Lenguajes</option>
+          </select>
         </div>
-
       </div>
 
       {/* Info */}
@@ -183,10 +222,19 @@ export default function Searchbar() {
         name="about"
         className="border border-gray-400 rounded-lg shadow-md p-5 pl-7 pr-7 m-10 absolute top-1/4 right-4 w-44 z-10"
       >
-        <h2 className="text-md border-b"><FontAwesomeIcon icon={faCircleInfo} /> Sobre la app</h2>
-        <p className="text-sm">Buscador basado en <a className="z-40" href="https://ramos.cadcc.cl/">RamosCC</a> de la página del CaDCC. <br /><br />
-        El tiempo dedicado de 6 es aprox el valor en créditos del ramo. <br /><br />
-        La barra busca dentro del nombre y descripción.
+        <h2 className="text-md border-b">
+          <FontAwesomeIcon icon={faCircleInfo} /> Sobre la app
+        </h2>
+        <p className="text-sm">
+          Buscador basado en{" "}
+          <a className="z-40" href="https://ramos.cadcc.cl/">
+            RamosCC
+          </a>{" "}
+          de la página del CaDCC. <br />
+          <br />
+          El tiempo dedicado de 6 es aprox el valor en créditos del ramo. <br />
+          <br />
+          La barra busca dentro del nombre y descripción.
         </p>
       </div>
       {/* Displayer */}
