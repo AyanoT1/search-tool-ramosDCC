@@ -7,7 +7,9 @@ import Course from "./Course";
 
 export default function Searchbar() {
   const [currentList, setCourses] = useState(
-    Object.keys({ ...Mandatory, ...Optionals })
+    Object.keys({ ...Mandatory, ...Optionals }).filter((x) => {
+      return { ...Mandatory, ...Optionals }[x].desc != "";
+    })
   );
   const [currentSource, setSource] = useState({ ...Mandatory, ...Optionals });
   const [sortBy, setSortBy] = useState("code");
