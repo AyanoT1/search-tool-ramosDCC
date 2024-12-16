@@ -52,13 +52,13 @@ export default function Searchbar() {
     }
   }
 
-  function genericSearch(
+  function genericSearch({
     pattern,
     source = currentSource,
     sorting = sortBy,
     reversion = isReversed,
-    tag = selectedArea
-  ) {
+    tag = selectedArea,
+  } = {}) {
     var results = Object.keys(source).filter((key) => {
       return (
         (source[key].name.toLowerCase().includes(pattern.toLowerCase()) ||
@@ -79,38 +79,30 @@ export default function Searchbar() {
   }
 
   function handleInputSearch(e) {
-    setCourses(genericSearch(e.target.value));
+    setCourses(genericSearch({ pattern: e.target.value }));
   }
 
   function handleSourceChange(e) {
     let newSource = sourceMapping[e.target.value];
     setSource(newSource);
-    setCourses(genericSearch(getQuery(), newSource));
+    setCourses(genericSearch({ pattern: getQuery(), source: newSource }));
   }
 
   function handleSortByChange(e) {
     setSortBy(e.target.value);
-    setCourses(genericSearch(getQuery(), currentSource, e.target.value));
+    setCourses(genericSearch({ pattern: getQuery(), sorting: e.target.value }));
   }
 
   function handleReverseOrder(e) {
     setReversed(e.target.checked);
     setCourses(
-      genericSearch(getQuery(), currentSource, sortBy, e.target.checked)
+      genericSearch({ pattern: getQuery(), reversion: e.target.checked })
     );
   }
 
   function handleAreaChange(e) {
     setArea(e.target.value);
-    setCourses(
-      genericSearch(
-        getQuery(),
-        currentSource,
-        sortBy,
-        isReversed,
-        e.target.value
-      )
-    );
+    setCourses(genericSearch({ pattern: getQuery(), tag: e.target.value }));
   }
 
   return (
