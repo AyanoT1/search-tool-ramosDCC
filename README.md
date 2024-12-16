@@ -2,6 +2,8 @@
 
 Herramienta de búsqueda basada en [RamosCC](https://ramos.cadcc.cl), desarrollada por el Centro de Alumnos CaDCC. Este proyecto es una remodelación de la interfaz de la herramienta original, con un diseño más moderno y simplificado.
 
+Prueba la herramienta [aquí](https://ayanot1.github.io/search-tool-ramosDCC/)!!!
+
 ## Funcionalidades
 
 - Búsqueda de ramos con los datos existentes de **RamosCC**.
