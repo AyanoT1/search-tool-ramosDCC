@@ -78,7 +78,7 @@ export default function Course({
                 </div>
             </div>
             <div name="tags">
-                {tags.map(t =>{ return(<span className={getTagStyle(t)}>{t}</span>)})}
+                {tags.map(t =>{ return(<span className={getTagStyle(t)} key={t}>{t}</span>)})}
             </div>
             <p className="mt-7">{desc}</p>
         </div>
