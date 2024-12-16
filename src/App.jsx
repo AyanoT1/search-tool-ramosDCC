@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Searchbar from "./Searchbar";
+import About from "./About";
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
   <>
     <Header/>
     <Searchbar/>
+    <About/>
   </>
   );
 }
