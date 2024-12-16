@@ -10,6 +10,7 @@ export default function Searchbar() {
   const [currentSource, setSource] = useState({ ...Mandatory, ...Optionals });
   const [sortBy, setSortBy] = useState("code");
   const [isReversed, setReversed] = useState(false);
+  const [selectedArea, setArea] = useState("");
   
   const sourceMapping = {
     Todos: { ...Mandatory, ...Optionals },
@@ -33,17 +34,24 @@ export default function Searchbar() {
       }
   }
 
-  function genericSearch(pattern, source=currentSource, sorting=sortBy, reversion=isReversed) {
+  function genericSearch(pattern, source=currentSource, sorting=sortBy, reversion=isReversed, tag=selectedArea) {
     if (pattern == "") {
       return [];
     }
-    const results = Object.keys(source).filter((key) => {
+    var results = Object.keys(source).filter((key) => {
       return (
         (source[key].name.toLowerCase().includes(pattern.toLowerCase()) ||
           source[key].desc.toLowerCase().includes(pattern.toLowerCase())) &&
         source[key].desc != ""
       );
     });
+
+    if (!tag=="") {
+      results = results.filter((key) => {
+        return source[key].tags.includes(tag)
+      })
+      console.log(results)
+    }
 
     results.sort(sortMapping(sorting, source))
     return (reversion) ?  results.reverse() : results;
@@ -72,6 +80,12 @@ export default function Searchbar() {
     setCourses(genericSearch(query, currentSource, sortBy, e.target.checked))
   }
 
+  function handleAreaChange(e) {
+    setArea(e.target.value)
+    let query = document.getElementById("searchbar-input").value.toLowerCase();
+    setCourses(genericSearch(query, currentSource, sortBy, isReversed, e.target.value))
+  }
+
   return (
     <>
       {/* Searchbar */}
@@ -97,10 +111,11 @@ export default function Searchbar() {
       {/* Filter */}
       <div
         name="filter-box"
-        className="border border-gray-400 rounded-lg shadow-md p-5 pl-7 pr-7 m-10 fixed top-52 z-10"
+        className="border border-gray-400 rounded-lg shadow-md p-5 pl-7 pr-7 m-10 fixed top-1/4 z-10"
       >
-        <h2 className="text-2xl">Filters</h2>
+        <h2 className="text-2xl">Filtros</h2>
         <hr className="border-gray-400 border" />
+
         {/* Source filter */}
         <div>
           <h3 className="font-semibold mt-2">Ramos:</h3>
@@ -124,6 +139,7 @@ export default function Searchbar() {
             );
           })}
         </div>
+
         {/* Sort by filter */}
         <div>
           <h3 className="font-semibold mt-2">Ordenar por:</h3>
@@ -136,6 +152,32 @@ export default function Searchbar() {
           </select> <br/>
           <input type="checkbox" onChange={handleReverseOrder}/> Invertir orden
         </div>
+
+        {/* Category Filter */}
+        <div>
+        <h3 className="font-semibold mt-2">Área:</h3>
+        <hr className="border-gray-400" />
+        <select name="sorting" id="sort-filter" onChange={handleAreaChange}  className="mt-2 h-7 rounded-md pl-2">
+          <option value="">Cualquiera</option>
+          <option value="Programación">Programación</option>
+          <option value="Software">Software</option>
+          <option value="Datos">Datos</option>
+          <option value="Teoría">Teoría</option>
+          <option value="HCI">HCI</option>
+          <option value="Apps web (opcional)">Apps web (opcional)</option>
+          <option value="Apps web">Apps web</option>
+          <option value="Gráfica">Gráfica</option>
+          <option value="Sistemas">Sistemas</option>
+          <option value="Arquitectura">Arquitectura</option>
+          <option value="Seguridad">Seguridad</option>
+          <option value="Machine Learning">Machine Learning</option>
+          <option value="Industria">Industria</option>
+          <option value="Investigación">Investigación</option>
+          <option value="Redes">Redes</option>
+          <option value="Lenguajes">Lenguajes</option>
+        </select>
+        </div>
+
       </div>
 
       {/* Displayer */}
@@ -151,6 +193,7 @@ export default function Searchbar() {
               desc={currentSource[key].desc}
               difficulty={currentSource[key].difficulty}
               time={currentSource[key].time}
+              tags={currentSource[key].tags}
             />
           );
         })}
