@@ -1,21 +1,12 @@
 import { useContext } from "react";
-import Mandatory from "../../assets/Mandatory.json";
-import Optionals from "../../assets/Optionals.json";
 import { SettingsContext } from "../Search";
-
-const AllSources = { ...Mandatory, ...Optionals };
-
-const sourceMapping = {
-  Todos: AllSources,
-  Obligatorios: Mandatory,
-  Electivos: Optionals
-};
+import { AvailableSources } from "../../utils/utils";
 
 function SourceFilter() {
   const { settings, setSettings } = useContext(SettingsContext);
 
   function handleSourceChange(e) {
-    setSettings({ ...settings, source: sourceMapping[e.target.value] });
+    setSettings({ ...settings, source: AvailableSources[e.target.value] });
   }
 
   return (

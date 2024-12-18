@@ -1,15 +1,11 @@
 import React, { useEffect } from "react";
 import { useState, createContext } from "react";
-import Mandatory from "../assets/Mandatory.json";
-import Optionals from "../assets/Optionals.json";
 import Searchbar from "./Searchbar";
 import Filterbox from "./Filterbox";
 import Display from "./Display";
-import { genericSearch } from "../utils/utils";
+import { AllSources, genericSearch } from "../utils/utils";
 
 export const SettingsContext = createContext();
-
-const AllSources = { ...Mandatory, ...Optionals };
 
 const initialSettings = {
   pattern: "",

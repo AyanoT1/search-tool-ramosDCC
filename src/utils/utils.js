@@ -1,3 +1,14 @@
+import Mandatory from "../assets/Mandatory.json";
+import Optionals from "../assets/Optionals.json";
+
+export const AllSources = { ...Mandatory, ...Optionals };
+
+export const AvailableSources = {
+  Todos: AllSources,
+  Obligatorios: Mandatory,
+  Electivos: Optionals,
+};
+
 function getSortFunction(option, source) {
   const convertNaN = (x) => (isNaN(x) ? 999 : parseInt(x));
 
