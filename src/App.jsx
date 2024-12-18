@@ -1,6 +1,6 @@
-import Header from "./Header";
+import Header from "./components/Header";
 import Search from "./components/Search";
-import About from "./About";
+import About from "./components/About";
 
 function App() {
 
