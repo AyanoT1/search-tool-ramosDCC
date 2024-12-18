@@ -3,11 +3,13 @@ import { useState, createContext } from "react";
 import Mandatory from "../assets/Mandatory.json";
 import Optionals from "../assets/Optionals.json";
 import Searchbar from "./Searchbar";
+import Filterbox from "./Filterbox";
 import Display from "./Display";
 import { genericSearch } from "../utils/utils";
 
 export const SettingsContext = createContext();
-export const AllSources = { ...Mandatory, ...Optionals };
+
+const AllSources = { ...Mandatory, ...Optionals };
 
 const initialSettings = {
   pattern: "",
@@ -22,12 +24,12 @@ function Search() {
   const [results, setResults] = useState([]);
 
   useEffect(() => setResults(genericSearch(settings)), [settings]);
-  useEffect(()=> console.log(results), [results])
 
   return (
     <>
       <SettingsContext.Provider value={{ settings, setSettings }}>
         <Searchbar />
+        <Filterbox/>
       </SettingsContext.Provider>
       <Display elements={results}/>
     </>
