@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import Mandatory from "./assets/Mandatory.json";
-import Optionals from "./assets/Optionals.json";
-import Course from "./Course";
+import Mandatory from "../assets/Mandatory.json";
+import Optionals from "../assets/Optionals.json";
+import Course from "../components/Course";
 
 export default function Searchbar() {
   const [currentList, setCourses] = useState(

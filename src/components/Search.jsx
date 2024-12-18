@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useState, createContext } from "react";
-import Mandatory from "./assets/Mandatory.json";
-import Optionals from "./assets/Optionals.json";
+import Mandatory from "../assets/Mandatory.json";
+import Optionals from "../assets/Optionals.json";
 import Searchbar from "./Searchbar";
 
 export const SettingsContext = createContext();

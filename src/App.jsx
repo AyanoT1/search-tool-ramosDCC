@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Search from "./Search";
+import Search from "./components/Search";
 import About from "./About";
 
 function App() {
