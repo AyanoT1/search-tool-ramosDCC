@@ -1,4 +1,5 @@
 import SourceFilter from "./filters/SourceFilter";
+import SortByFilter from "./filters/SortByFilter";
 
 function Filterbox() {
   return (
@@ -10,6 +11,8 @@ function Filterbox() {
       <hr className="border-gray-400 border" />
 
       <SourceFilter />
+
+      <SortByFilter />
     </div>
   );
 }
