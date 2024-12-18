@@ -1,5 +1,6 @@
 import SourceFilter from "./filters/SourceFilter";
 import SortByFilter from "./filters/SortByFilter";
+import TagFilter from "./filters/TagFilter";
 
 function Filterbox() {
   return (
@@ -13,6 +14,8 @@ function Filterbox() {
       <SourceFilter />
 
       <SortByFilter />
+
+      <TagFilter/>
     </div>
   );
 }

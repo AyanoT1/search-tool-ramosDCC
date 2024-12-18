@@ -9,6 +9,8 @@ export const AvailableSources = {
   Electivos: Optionals,
 };
 
+export const TagList = [...new Set(Object.values(AllSources).flatMap(course => course.tags || []))]
+
 function getSortFunction(option, source) {
   const convertNaN = (x) => (isNaN(x) ? 999 : parseInt(x));
 
