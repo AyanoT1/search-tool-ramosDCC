@@ -1,5 +1,5 @@
 import Header from "./Header";
-import Searchbar from "./Searchbar";
+import Search from "./Search";
 import About from "./About";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
   <>
     <Header/>
-    <Searchbar/>
+    <Search/>
     <About/>
   </>
   );
