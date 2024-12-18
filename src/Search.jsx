@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState, createContext } from "react";
 import Mandatory from "./assets/Mandatory.json";
 import Optionals from "./assets/Optionals.json";
@@ -15,7 +15,9 @@ const initialSettings = {
 };
 
 function Search() {
-  const [settings, setSettings] = useState({ initialSettings });
+  const [settings, setSettings] = useState(initialSettings);
+
+  useEffect(() => console.log(settings), [settings])
 
   return (
     <SettingsContext.Provider value={{ settings, setSettings }}>

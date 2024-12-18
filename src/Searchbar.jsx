@@ -7,7 +7,7 @@ function Searchbar() {
   const { settings, setSettings } = useContext(SettingsContext);
 
   function handleInputSearch(e) {
-    console.log(1);
+    setSettings({ ...settings, pattern: e.target.value });
   }
 
   return (
