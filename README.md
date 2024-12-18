@@ -1,3 +1,7 @@
+# ⚠️ Refactorización en proceso ⚠️
+
+Implementé todo solo sabiendo ocupar useState y estoy refactorizando con más hooks para separar mejor todo!!!
+
 # search-tool-ramosDCC
 
 Herramienta de búsqueda basada en [RamosCC](https://ramos.cadcc.cl), desarrollada por el Centro de Alumnos CaDCC. Este proyecto es una remodelación de la interfaz de la herramienta original, con un diseño más moderno y simplificado.
